@@ -42,6 +42,7 @@
 	
 			<div class="filters-content">
 				<div class="row portfolio-grid justify-content-center">
+					{% for key, nome_projeto in nome_projetos.items %}
 					
 					<div class="col-lg-4 col-md-6 all latest">
 						<div class="portfolio_box">
@@ -56,47 +57,12 @@
 							</div>
 							<div class="short_info">
 								<h4><a href="{% url 'projeto_details' %}">PROJETO PYTHON #1</a></h4>
-								<p>Calculadora de Notas Acadêmicas</p>
+								<p>{{ nome_projeto }}</p>  <!-- Dicionario dentro de views.py -->
 							</div>
 						</div>
 					</div>
+					{% endfor %}
 
-					<div class="col-lg-4 col-md-6 all latest">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{% static 'img/portfolio/python-logo.png' %}" width="300" alt="">
-								<div class="overlay"></div>
-								<a href="{% static 'img/portfolio/python-logo.png' %}" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="{% url 'projeto_details' %}">PROJETO PYTHON #2</a></h4>
-								<p>Calculadora de Notas Acadêmicas</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 all latest">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{% static 'img/portfolio/python-logo.png' %}" width="300" alt="">
-								<div class="overlay"></div>
-								<a href="{% static 'img/portfolio/python-logo.png' %}" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="{% url 'projeto_details' %}">PROJETO PYTHON #3</a></h4>
-								<p>Calculadora de Notas Acadêmicas</p>
-							</div>
-						</div>
-					</div>
-					
 					<div class="col-lg-4 col-md-6 all popular">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
@@ -114,43 +80,6 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="col-lg-4 col-md-6 all popular">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{% static 'img/portfolio/django-logo3.png' %}" width="300" alt="">
-								<div class="overlay"></div>
-								<a href="{% static 'img/portfolio/django-logo3.png' %}" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="{% url 'projeto_details' %}">PROJETO DJANGO #2</a></h4>
-								<p>Portfólio de Projetos</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 all popular">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{% static 'img/portfolio/django-logo3.png' %}" width="300" alt="">
-								<div class="overlay"></div>
-								<a href="{% static 'img/portfolio/django-logo3.png' %}" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="{% url 'projeto_details' %}">PROJETO DJANGO #3</a></h4>
-								<p>Portfólio de Projetos</p>
-							</div>
-						</div>
-					</div>
-					
 				</div>
 			</div>
 		</div>
