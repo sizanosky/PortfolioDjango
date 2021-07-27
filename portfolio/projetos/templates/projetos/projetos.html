@@ -42,7 +42,8 @@
 	
 			<div class="filters-content">
 				<div class="row portfolio-grid justify-content-center">
-					{% for key, nome_projeto in nome_projetos.items %}
+					{% if projetos %}
+					{% for projeto in projetos %}
 					
 					<div class="col-lg-4 col-md-6 all latest">
 						<div class="portfolio_box">
@@ -56,30 +57,14 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="{% url 'projeto_details' %}">PROJETO PYTHON #1</a></h4>
-								<p>{{ nome_projeto }}</p>  <!-- Dicionario dentro de views.py -->
+								<h4><a href="{% url 'projeto_details' projeto.id %}">{{ projeto.nome_projeto }}</a></h4>
+								<p>{{ projeto.descricao_projeto }}</p>
 							</div>
 						</div>
 					</div>
 					{% endfor %}
-
-					<div class="col-lg-4 col-md-6 all popular">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{% static 'img/portfolio/django-logo3.png' %}" width="300" alt="">
-								<div class="overlay"></div>
-								<a href="{% static 'img/portfolio/django-logo3.png' %}" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="{% url 'projeto_details' %}">PROJETO DJANGO #1</a></h4>
-								<p>Portfólio de Projetos</p>
-							</div>
-						</div>
-					</div>
+					{% else %}
+					{% endif %}
 				</div>
 			</div>
 		</div>

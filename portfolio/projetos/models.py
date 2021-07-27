@@ -15,4 +15,4 @@ class Projeto(models.Model):
     website = models.CharField(max_length=200)
     linguagem = models.CharField(max_length=100)
     tags_projeto = models.TextField()
-    detahes_projeto = models.TextField()
+    detalhes_projeto = models.TextField()

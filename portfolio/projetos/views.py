@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import Projeto
 
 # Create your views here.
 
@@ -9,18 +10,19 @@ def index(request):
 
 
 def projetos(request):
-    dic_projetos = {
-        'proj_1': 'Weather Around World - usando API',
-        'proj_2': "Buscando noticias com API's",
-        'proj_3': 'Logando no Facebook - usando Selenium'
-    }
+    bd_projetos = Projeto.objects.all()  # API Django, Projeto(banco de dados)
+
     dados_projetos = {
-        'nome_projetos': dic_projetos
+        'projetos': bd_projetos
     }
     return render(request,
                   'projetos/projetos.html', dados_projetos)
 
 
-def projeto_details(request):
-    return render(request,
-                  'projetos/projeto_details.html')
+def projeto_details(request, projeto_id):
+    projeto = get_object_or_404(Projeto, pk=projeto_id)
+    dados_projeto = {
+        'projeto': projeto
+    }
+
+    return render(request, 'projetos/projeto_details.html', dados_projeto)
