@@ -24,5 +24,4 @@ def projeto_details(request, projeto_id):
     dados_projeto = {
         'projeto': projeto
     }
-
     return render(request, 'projetos/projeto_details.html', dados_projeto)
