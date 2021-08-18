@@ -2,8 +2,18 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-{% include 'partials/menu.html' %}
+{% include 'partials/header.html' %}
 
+<style>
+	.about_area2{
+    width: 100vw;
+    height: 125vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid red;}
+</style>
 	<!--================ Start Home Banner Area =================-->
 	<section class="home_banner_area">
 		<div class="banner_inner">
@@ -11,9 +21,9 @@
 				<div class="row">
 					<div class="col-lg-7">
 						<div class="banner_content">
-							<h3 class="text-uppercase" style="margin-top: 220px">Olá</h3>
+							<h3 class="text-uppercase" style="margin-top: 190px">Olá</h3>
 							<h1 class="text-uppercase">Meu nome é Fabricio</h1>
-							<h5 class="text-uppercase">Graduando em Analise de sistemas, Técnico de audio e Lighting desiner.</h5>
+							<h5 class="text-uppercase">Graduando em Análise e Desenvolvimento de sistemas.</h5>
 							<div class="d-flex align-items-center">
 								<a class="primary_btn" href="#"><span>Me Contrate!</span></a>
 								<a class="primary_btn tr-bg" href="#"><span>Veja meu CV</span></a>
@@ -32,7 +42,7 @@
 	<!--================ End Home Banner Area =================-->
 
 	<!--================ Start About Us Area =================-->
-	<section class="about_area section_gap">
+	<section class="about_area section_gap about_area2">
 		<div class="container">
 			<div class="row justify-content-start align-items-center">
 				<div class="col-lg-5">
@@ -43,21 +53,20 @@
 
 				<div class="offset-lg-1 col-lg-5">
 					<div class="main_title text-left">
-						<h2>Deixa <br>
-							eu<br>
+						<h2>Deixa eu<br>
 							me apresentar!<br>
-							</h2>
-							
+						</h2>
 						<p>
-							Adoro trabalhar com tecnologia principalmente quando posso usar
-							programação para otimizar processos.<br>
-							Trabalho com audio profissional há mais de 20 anos.<br>
-							Há um ano decidi me formar como Analista de Sistemas.<br>
-						</p>
-						<p>
-							Hoje sou Analista de Sistemas aqui no Brasil e uso Python em diversos projetos!<br>
-							Amo trabalhar com audio profissional e uso programação para resolver problemas,<br>
-							automatizar tarefas repetitivas e criar sistemas web!
+							Sempre fui apaixonado por tecnologia, integrar tecnologia ao meu dia é quase um "hobby"!<br>
+							Trabalhei com shows e eventos por mais de 20 anos e sempre que possível usei tecnologia, programação
+							para resolver problemas, automatizar tarefas repetitivas e otimizar o meu dia de trabalho.<br>
+							Com o início da pandemia de COVID-19 senti a necessidade de me reinventar e buscar mais estabilidade,
+							então decidi buscar alguns cursos e aproveitar esse tempo "livre" foi quando tive o meu primeiro contato
+							com Python e... "Bingo" fiquei ainda mais fascinado por tecnologia.<br>
+							Em maio/2020 decidi finalmente me formar o que era uma pendência antiga, hoje estou cursando Analise e Desenvolvimento
+							de Sistemas e ja tive experiencias também com linguagens como C++, Java, HTML, ASP.net, SQL.
+							Experiencias que me trouxeram uma perspectiva diferente de emprego com um foco em transformar
+							aquele "hobby" em uma profissão ligada a tecnologia de fato.
 						</p>
 						<a class="primary_btn" href="#"><span>Baixar meu CV</span></a>
 					</div>
