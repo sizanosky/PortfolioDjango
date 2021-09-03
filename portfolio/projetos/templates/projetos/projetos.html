@@ -10,10 +10,10 @@
             <div class="container">
                 <div class="banner_content text-center bg_img_projects">
                     <h2>Projetos</h2>
-                    <div class="page_link">
+                    <nav class="page_link">
                         <a class="page_link_text" href="{% url 'index' %}">Início</a>
                         <a class="page_link_text" href="{% url 'projetos' %}">Projetos</a>
-                    </div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -26,8 +26,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="main_title text-left">
-						<h2>PROJETOS RECENTEMENTE<br>
-							CONCLUÍDOS:
+						<h2>PROJETOS <br>
+							em desenvolvimento:
 						</h2>
 					</div>
 				</div>
@@ -48,13 +48,12 @@
 					<div class="col-lg-4 col-md-6 all latest">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
+								{% if projeto.Linguagem == Python %}
 								<img class="img-fluid w-100" src="{% static 'img/portfolio/python-logo.png' %}" alt="python-logo">
+								{% elif projeto.Linguagem == C %}
+								<img class="img-fluid w-100" src="{% static 'img/site_django/logos/c-logo.png' %}" alt="C++-logo">
 								<div class="overlay"></div>
-								<a href="{% static 'img/portfolio/python-logo.png' %}" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
+								{% endif %}
 							</div>
 							<div class="short_info">
 								<h4><a href="{% url 'projeto_details' projeto.id %}">{{ projeto.nome_projeto }}</a></h4>
