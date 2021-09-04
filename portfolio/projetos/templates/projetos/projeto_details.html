@@ -26,9 +26,15 @@
         <div class="container">
             <div class="portfolio_details_inner">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-5">
                         <div class="left_img">
-                            <img class="img-fluid" src="{% static 'img/portfolio/python-logo.png' %}" width="300" alt="">
+                            {% if projeto.linguagem == "Python" %}
+                            <img class="img-fluid w-100" src="{% static 'img/site_django/logos/python-logo.png' %}" alt="python-logo">
+                            {% elif projeto.linguagem == "C" %}
+                            <img class="img-fluid w-100" src="{% static 'img/site_django/logos/c-logo.png' %}" alt="C++-logo">
+                            {% elif projeto.linguagem == "Python/Django" %}
+                            <img class="img-fluid w-100" src="{% static 'img/site_django/logos/django-logo4.png' %}" alt="Django-logo">
+                            {% endif %}
                         </div>
                     </div>
                     <div class="offset-lg-1 col-lg-5">

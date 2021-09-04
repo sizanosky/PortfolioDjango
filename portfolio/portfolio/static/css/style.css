@@ -109,7 +109,7 @@ button:focus {
     .main_title {
       margin-bottom: 50px; } }
   .main_title h2 {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 700;
     margin-bottom: 15px;
     line-height: 50px;
@@ -413,9 +413,9 @@ button:focus {
     overflow: hidden;
     width: 100%;
     min-height: 485px;
-    background: url(../img/banner/common-banner.png) no-repeat right bottom;
-    background-size: 90% 85%;
-    width: 98%;
+    background: url(../img/banner/banner-projetos2.png) no-repeat center bottom;
+    background-size: 85% 55%;
+    width: 100%;
     z-index: 1; }
     @media (max-width: 1199px) {
       .banner_area .banner_inner {
@@ -2708,7 +2708,7 @@ h6 {
     margin-bottom: 60px; }
 .portfolio_details_inner .portfolio_right_text {
   width: 700px;
-  margin-left: -50%;
+  margin-left: -30%;
   margin-top: 0px; }
   .portfolio_details_inner .portfolio_right_text h4 {
     font-size: 20px;
@@ -3314,11 +3314,12 @@ h6 {
 /* Start About Area css <index.html>
 ============================================================================================ */
 #about-text{
-    margin-top: 60px;
+    margin-top: 65px;
     margin-left: -100px;
     width: 680px;
 }
 .about_paragraph{
+    margin-top: 20px;
 }
 .about_button_link{
     margin-left: 10px;
@@ -3336,6 +3337,10 @@ h6 {
     text-decoration: underline;
 }
 
+.bg_img_projects{
+    border: solid green;
+    text-align: center;}
+
 /* End Project Banner Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
@@ -3346,7 +3351,6 @@ h6 {
     position: relative;
     width: 100%;
     margin-top: -150px;
-    padding: 15px;
 }
 
 .footer_social{

@@ -8,7 +8,7 @@
     <section class="banner_area">
         <div class="banner_inner d-flex align-items-center">
             <div class="container">
-                <div class="banner_content text-center bg_img_projects">
+                <div class="banner_content text-center">
                     <h2>Projetos</h2>
                     <nav class="page_link">
                         <a class="page_link_text" href="{% url 'index' %}">Início</a>
@@ -48,10 +48,14 @@
 					<div class="col-lg-4 col-md-6 all latest">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
-								{% if projeto.Linguagem == Python %}
-								<img class="img-fluid w-100" src="{% static 'img/portfolio/python-logo.png' %}" alt="python-logo">
-								{% elif projeto.Linguagem == C %}
+								{% if projeto.linguagem == "Python" %}
+								<img class="img-fluid w-100" src="{% static 'img/site_django/logos/python-logo.png' %}" alt="python-logo">
+								<div class="overlay"></div>
+								{% elif projeto.linguagem == "C" %}
 								<img class="img-fluid w-100" src="{% static 'img/site_django/logos/c-logo.png' %}" alt="C++-logo">
+								<div class="overlay"></div>
+								{% elif projeto.linguagem == "Python/Django" %}
+								<img class="img-fluid w-100" src="{% static 'img/site_django/logos/django-logo4.png' %}" alt="Django-logo">
 								<div class="overlay"></div>
 								{% endif %}
 							</div>
